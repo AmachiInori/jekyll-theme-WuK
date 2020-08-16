@@ -5,7 +5,7 @@ layout: comments
   <span class="post-date">
     {% if page.jekyll-theme-WuK.post.date.enable %}
     {{ page.jekyll-theme-WuK.post.date.prepend }}
-    {{ page.date | date_to_string }}
+    {{ page.date | date: "%Y-%m-%d" }}
     {% endif %}
     {% if page.jekyll-theme-WuK.post.wordcount.enable %}
     {{ page.jekyll-theme-WuK.post.wordcount.prepend }}
