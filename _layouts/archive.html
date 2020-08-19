@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: pagewithfoot
 ---
 {{ content }}
 {% capture archive_content %}
@@ -47,4 +47,3 @@ pie
 - *{{ post.date | date: "%Y-%m-%d" }}* [{{ post.title }}]({{ post.url | relative_url }}){% endfor %}
 {% endcapture %}
 {{ archive_content | markdownify }}
-{{ page.jekyll-theme-WuK.default.page-foot }}
