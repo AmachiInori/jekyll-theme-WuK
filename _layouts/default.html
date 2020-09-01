@@ -47,7 +47,7 @@ layout: compress
     {% endif %}
     <nav class="sidebar-nav">
       {% for node in page.jekyll-theme-WuK.default.sidebar.nav %}
-      <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}">
+      <a class="sidebar-nav-item{% if page.url == node.href %} active{% endif %}" href="{{ node.href }}" target="{{ node.target }}">
         {{ node.title }}
       </a>
       {% endfor %}
