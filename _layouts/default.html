@@ -60,7 +60,6 @@ layout: compress
       {{ page.jekyll-theme-WuK.default.sidebar.jekyll-toc.prepend }}
       {% include toc.html html=content ordered=true skipNoIDs=true sanitize=true id="toc" %}
       {% endif %}
-      {{ page.verson }}
       {% for node in page.jekyll-theme-WuK.default.sidebar.append_to_sidebar %}
       {{ node }}
       {% endfor %}
@@ -82,6 +81,7 @@ layout: compress
         {% else %}
         {{ count }}{{ page.jekyll-theme-WuK.default.sidebar.wordcount.unit }}
         {% endif %}
+        {{ page.verson }}
       </div>
       {% endif %}
     </div>
