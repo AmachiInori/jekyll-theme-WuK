@@ -101,7 +101,7 @@
         {% assign indentAmount = headerLevel | minus: minHeader %}
         {% assign space = '' %}
         {% for i in (1..indentAmount) %}
-            {% assign space = space | prepend: '    ' %}
+            {% assign space = space | prepend: '  ' %}
         {% endfor %}
 
         {% if include.item_class and include.item_class != blank %}
@@ -161,7 +161,7 @@
             {% assign closingSpace = '' %}
 
             {% for i in (1..lvl) %}
-                {% assign closingSpace = closingSpace | prepend: '    ' %}
+                {% assign closingSpace = closingSpace | prepend: '  ' %}
             {% endfor %}
 
             {% capture my_toc %}{{ my_toc }}
