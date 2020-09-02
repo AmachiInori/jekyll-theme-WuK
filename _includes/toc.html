@@ -128,7 +128,7 @@
             `space` is the current indentation, so we if want to close off the previous grouping, we need to add one
             more level of indentation 
             -->
-            {% assign submenuIndentation = space | prepend: '    ' %}
+            {% assign submenuIndentation = space | prepend: '  ' %}
 
             {% capture my_toc %}{{ my_toc }}
 {{ submenuIndentation }}{:.{{ include.submenu_class | replace: '%level%', previousLevel }}}{% endcapture %}
