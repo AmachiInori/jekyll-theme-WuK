@@ -99,7 +99,7 @@
         {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
         {% assign indentAmount = headerLevel | minus: minHeader %}
-        {% assign space = '' %}
+        {% assign space = '<br/>' %}
         {% for i in (1..indentAmount) %}
             {% assign space = space | prepend: '  ' %}
         {% endfor %}
@@ -158,7 +158,7 @@
         <!-- The last level of indentation that we were at, we need to work backwards from there closing each group -->
         {% for i in (1..previousLevel) %}
             {% assign lvl = previousLevel | plus: 1 | minus: i %} <!-- Invert the indent level based on `i` -->
-            {% assign closingSpace = '' %}
+            {% assign closingSpace = '<br/>' %}
 
             {% for i in (1..lvl) %}
                 {% assign closingSpace = closingSpace | prepend: '  ' %}
