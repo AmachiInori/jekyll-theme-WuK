@@ -99,9 +99,9 @@
         {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
         {% assign indentAmount = headerLevel | minus: minHeader %}
-        {% assign space = '<br/>' %}
+        {% assign space = '' %}
         {% for i in (1..indentAmount) %}
-            {% assign space = space | prepend: '  ' %}
+            {% assign space = space | prepend: '    ' %}
         {% endfor %}
 
         {% if include.item_class and include.item_class != blank %}
@@ -128,7 +128,7 @@
             `space` is the current indentation, so we if want to close off the previous grouping, we need to add one
             more level of indentation 
             -->
-            {% assign submenuIndentation = space | prepend: '  ' %}
+            {% assign submenuIndentation = space | prepend: '    ' %}
 
             {% capture my_toc %}{{ my_toc }}
 {{ submenuIndentation }}{:.{{ include.submenu_class | replace: '%level%', previousLevel }}}{% endcapture %}
@@ -158,10 +158,10 @@
         <!-- The last level of indentation that we were at, we need to work backwards from there closing each group -->
         {% for i in (1..previousLevel) %}
             {% assign lvl = previousLevel | plus: 1 | minus: i %} <!-- Invert the indent level based on `i` -->
-            {% assign closingSpace = '<br/>' %}
+            {% assign closingSpace = '' %}
 
             {% for i in (1..lvl) %}
-                {% assign closingSpace = closingSpace | prepend: '  ' %}
+                {% assign closingSpace = closingSpace | prepend: '    ' %}
             {% endfor %}
 
             {% capture my_toc %}{{ my_toc }}
