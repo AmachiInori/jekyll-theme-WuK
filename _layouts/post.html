@@ -29,9 +29,9 @@ layout: comments
     {{ page.tags | array_to_sentence_string }}
     {% endif %}
     {% endif %}
-    {% if page.copyright == 'default'%}
+    {% if page.copyright == "default" %}
     {{ page.jekyll-theme-WuK.post.copyright }}
-    {% elsif page.copyright == 'empty' %}
+    {% elsif page.copyright == "empty" %}
     {% else %}
     {{ page.copyright}}
     {% endif %}
